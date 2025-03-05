@@ -5,6 +5,11 @@ Follow formatting guidelines from https://gsas.harvard.edu/resource/dissertation
 
 # Changelog
 
+## 0.1.2
+- Fixed title style
+- Added Numbering for equations and figures
+- Improved margin
+
 ## 0.1.1
 - Added `creative_commons` option for front matter
 - Fixed title printing just before Abstract
