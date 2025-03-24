@@ -109,7 +109,7 @@
     // to mimic Double Spacing
     // https://github.com/typst/typst/issues/106#issuecomment-2041051807
     set text(top-edge: 0.7em, bottom-edge: -0.4em)
-    set par(justify:true, leading: 1em)
+    set par(justify:true, spacing: 1.8em, leading: 1em)
 
 
     [*Abstract*]
@@ -120,6 +120,16 @@
 
     show outline.entry.where(level: 1): set outline.entry(fill: none)
     show outline.entry.where(level: 1): it => {smallcaps(it)}
+
+    show ref: it => {set text(fill: school-color); it}
+    show figure.caption: it => [
+      #set text(size: 10pt)
+      #set par(justify:true)
+      #set align(left)
+      #strong([#it.supplement
+        #context it.counter.display(it.numbering):
+      ]) #it.body
+      ]
 
     outline(
         title: grid([
