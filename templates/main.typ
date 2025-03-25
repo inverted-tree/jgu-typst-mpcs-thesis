@@ -1,4 +1,4 @@
-#import "@preview/harvard-gsas-thesis-oat:0.1.3": frontmatter, school-color
+#import "@preview/harvard-gsas-thesis-oat:0.1.4": frontmatter, school-color, appendix
 
 #let ifb = $"fb"^(-1)$
 #let total-lumi = [140 #ifb]
@@ -55,4 +55,21 @@ $
 0.002(x + 89.6)^(-1.06log(x))
 $
 
+#show: appendix.with()
 
+= Appendix
+
+#lorem(20) @appendix_figure
+$
+    a^2 + b^2 = c^2
+$
+
+== Appendix is hard
+$
+    a^3 + b^3 = c^3
+$
+
+#figure(
+  rect(fill: school-color),
+  caption: [Here's a figure in Appendix],
+) <appendix_figure>

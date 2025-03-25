@@ -37,17 +37,18 @@
     ]
     show heading.where(level: 1): smallcaps
     show heading.where(level: 1): it => {
-      counter(math.equation).update(0)
-      counter(figure.where(kind: image)).update(0)
-      counter(figure.where(kind: table)).update(0)
-      counter(figure.where(kind: raw)).update(0)
-      it
+        counter(math.equation).update(0)
+        counter(figure.where(kind: image)).update(0)
+        counter(figure.where(kind: table)).update(0)
+        counter(figure.where(kind: raw)).update(0)
+        it
     }
+
     set math.equation(numbering: (..num) =>
-      numbering("(1.1)", counter(heading).get().first(), num.pos().first())
+        numbering("(1.1.1)", counter(heading).get().first(), ..num)
     )
     set figure(numbering: (..num) =>
-      numbering("1.1", counter(heading).get().first(), num.pos().first())
+        numbering("1.1.1", counter(heading).get().first(), ..num)
     )
     set page(numbering:none)
     set align(center + horizon)
@@ -123,13 +124,13 @@
 
     show ref: it => {set text(fill: school-color); it}
     show figure.caption: it => [
-      #set text(size: 10pt)
-      #set par(justify:true)
-      #set align(left)
-      #strong([#it.supplement
-        #context it.counter.display(it.numbering):
-      ]) #it.body
-      ]
+        #set text(size: 10pt)
+        #set par(justify:true)
+        #set align(left)
+        #strong([#it.supplement
+            #context it.counter.display(it.numbering):
+        ]) #it.body
+    ]
 
     outline(
         title: grid([
@@ -140,9 +141,44 @@
         ])
     )
 
-
     set page(numbering:none)
     counter(page).update(1)
     set page(numbering:"1")
+    doc
+}
+
+#let appendix(
+    doc
+) = {
+    set heading(numbering: (..num) =>
+        "A." + numbering("1", num.pos().last())
+    )
+    show heading.where(
+        level: 1, outlined: true
+    ): it => [
+        #set align(right)
+        #set text(20pt, weight: "regular")
+        #pagebreak()
+        #v(25%)
+        #text(100pt, school-color, "A")\
+        #text(24.88pt, it.body)
+        #v(4em)
+    ]
+    show heading.where(level: 1): smallcaps
+
+    show heading.where(level: 1): it => {
+        counter(math.equation).update(0)
+        counter(figure.where(kind: image)).update(0)
+        counter(figure.where(kind: table)).update(0)
+        counter(figure.where(kind: raw)).update(0)
+        it
+    }
+
+    set math.equation(numbering: (..num) =>
+        "(A." + numbering("1.1", ..num) + ")"
+    )
+    set figure(numbering: (..num) =>
+        "A." + numbering("1.1", ..num)
+    )
     doc
 }

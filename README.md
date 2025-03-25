@@ -5,6 +5,10 @@ Follow formatting guidelines from https://gsas.harvard.edu/resource/dissertation
 
 # Changelog
 
+## 0.1.4
+- Added `appendix()` function for appendix, which resets numbering to start with `A.`
+- fix equation numbering style to include `()`
+
 ## 0.1.3
 - Improved figure caption alignment, size, and separation
 
