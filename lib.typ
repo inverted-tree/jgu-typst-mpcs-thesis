@@ -6,7 +6,7 @@
     author: "John Harvard",
     advisor: "Dear Advisor",
     department: "Department of Physics",
-    doctor-of: "Philosophy",
+    degree: "M.Sc."
     major: "Physics",
     completion-date: datetime.today().display("[month repr:long] [year]"),
     creative-commons: true,
@@ -68,7 +68,7 @@
             #v(12pt)
             in partial fulfillment of the requirements\
             for the degree of\
-            Doctor of #doctor-of\
+            #degree\
             in the subject of\
             #major
             #v(12pt)
