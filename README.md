@@ -4,5 +4,10 @@
 </div>
 
 > [!IMPORTANT]
+> This template is currently a work-in-progress and not yet published to the pypst package repository. Once it is finised, I will create a release and publish. Stay tuned.
+
+---
+
+> [!IMPORTANT]
 > This project is a modified version of Jerry Ling's [harvard-gsas-thesis-oat](https://github.com/Moelf/harvard-gsas-thesis-oat) typst template, originally licensed under the MIT License.
 
