@@ -1,5 +1,5 @@
 [package]
-name = "jgu-cs-thesis"
+name = "jgu-mpcs-thesis"
 version = "0.1.0"
 entrypoint = "lib.typ"
 authors = [
@@ -7,20 +7,21 @@ authors = [
 	"inverted-tree <https://github.com/inverted-tree>",
 	]
 license = "MIT"
-description = "Computer Science Thesis Template for the Johannes-Gutenberg University based on the Harvard Dissertation Formatting Guidance"
-repository = "https://github.com/inverted-tree/jgu-typst-cs-thesis"
+description = "Inofficial Math/Physics/Computer-Science Thesis Template for the Johannes-Gutenberg University based on the Harvard Dissertation Formatting Guidance and JGU Corporate Design Manual."
+repository = "https://github.com/inverted-tree/jgu-typst-mpcs-thesis"
 keywords = [
 	"Harvard",
 	"Harvard University",
 	"JGU",
 	"Johannes-Gutenberg University",
 	"Thesis",
+	"Mathmatics",
+	"Physics",
 	"Computer Science",
-	"CS"
 	]
 categories = ["thesis"]
 
 [template]
 path = "templates"
-entrypoint = "main.typ"
+entrypoint = "thesis.typ"
 thumbnail = "img/thumbnail.png"
