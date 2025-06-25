@@ -6,7 +6,7 @@
     author: "John Harvard",
     advisor: "Dear Advisor",
     department: "Department of Physics",
-    degree: "M.Sc."
+    degree: "M.Sc.",
     major: "Physics",
     completion-date: datetime.today().display("[month repr:long] [year]"),
     creative-commons: true,
@@ -60,7 +60,7 @@
             #v(100pt)
             #show: smallcaps
 
-            A dissertation presented\
+            A thesis presented\
             by\
             #author\
             to\
@@ -72,8 +72,8 @@
             in the subject of\
             #major
             #v(12pt)
-            Harvard University\
-            Cambridge, Massachusetts\
+            Johannes-Gutenberg University\
+            Mainz\
             #completion-date
         ]
     )
@@ -98,7 +98,7 @@
     set align(top)
     grid(
         columns:(auto, 1fr, auto),
-        [Dissertation Advisor: #advisor],
+        [Advisor: #advisor],
         [],
         [#author]
     )

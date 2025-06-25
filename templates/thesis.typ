@@ -1,5 +1,4 @@
-// #import "@preview/jgu-cs-thesis:0.1.0": frontmatter, school-color, appendix
-#import "lib.typ": *
+#import "@local/jgu-mpcs-thesis:0.1.0": * 
 
 #let ifb = $"fb"^(-1)$
 #let total-lumi = [140 #ifb]
