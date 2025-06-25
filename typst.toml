@@ -1,12 +1,23 @@
 [package]
-name = "harvard-gsas-thesis-oat"
-version = "0.1.4"
+name = "jgu-cs-thesis"
+version = "0.1.0"
 entrypoint = "lib.typ"
-authors = ["Moelf <https://github.com/Moelf>"]
+authors = [
+	"Moelf <https://github.com/Moelf>",
+	"inverted-tree <https://github.com/inverted-tree>",
+	]
 license = "MIT"
-description = "PhD Thesis template for Harvard GSAS (Graduate School of Arts and Sciences)"
-repository = "https://github.com/Moelf/harvard-gsas-thesis-oat"
-keywords = ["Harvard", "GSAS", "Harvard University", "dissertation", "thesis"]
+description = "Computer Science Thesis Template for the Johannes-Gutenberg University based on the Harvard Dissertation Formatting Guidance"
+repository = "https://github.com/inverted-tree/jgu-typst-cs-thesis"
+keywords = [
+	"Harvard",
+	"Harvard University",
+	"JGU",
+	"Johannes-Gutenberg University",
+	"Thesis",
+	"Computer Science",
+	"CS"
+	]
 categories = ["thesis"]
 
 [template]
